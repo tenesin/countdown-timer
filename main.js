@@ -4,6 +4,7 @@
     hour = minute * 60,
     day = hour * 24;
 
+<<<<<<< HEAD
     let today = new Date();
     let dd = String(today.getDate()).padStart(2, "0");
     let mm = String(today.getMonth() + 1).padStart(2, "0");
@@ -21,6 +22,20 @@
     console.log("Today: " + today);
     console.log("Birthday: " + birthday);
     
+=======
+  let today = new Date(),
+    dd = String(today.getDate()).padStart(2, "0"),
+    mm = String(today.getMonth() + 1).padStart(2, "0"),
+    yyyy = today.getFullYear(),
+    nextYear = yyyy + 1,
+    dayMonth = "09/30/",
+    birthday = dayMonth + yyyy;
+
+  today = mm + "/" + dd + "/" + yyyy;
+  if (today > birthday) {
+    birthday = dayMonth + nextYear;
+  }
+>>>>>>> 233620e8ee92b73687d2d2a19f458c85abfa0cc4
 
   const countDown = new Date(birthday).getTime(),
     x = setInterval(function () {
